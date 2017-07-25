@@ -1,0 +1,216 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+body {
+    font-family: 'Noto Sans Japanese', serif;
+	font-size:14px;
+}
+
+#topcontrol {
+	background-color:#3a3a3a;
+	color:#FFF;
+	font-size:40px;
+	line-height:0;
+	padding:0 10px 5px;
+	z-index:999;
+
+}
+
+#sp {
+	display:none;
+}
+p {
+	line-height:1.8em;
+	letter-spacing:0.1em;
+}
+
+.img100 img {
+	width:100%;
+	height:auto;
+}
+.cy_hover {
+	-webkit-transition: 0.3s ease-in-out;  
+       -moz-transition: 0.3s ease-in-out;  
+         -o-transition: 0.3s ease-in-out;  
+            transition: 0.3s ease-in-out;
+}
+
+.hover img {
+	-webkit-transition: 0.3s ease-in-out;  
+       -moz-transition: 0.3s ease-in-out;  
+         -o-transition: 0.3s ease-in-out;  
+            transition: 0.3s ease-in-out;
+}
+.hover img:hover{
+	opacity: 0.4;  
+    filter: alpha(opacity=60);
+}
+.cy_container {
+	width:97%;
+	max-width:960px;
+	margin:0 auto;
+}
+
+#spbox {
+	display:none;
+}
+
+.font {
+	font-family:"ヒラギノ明朝 ProN W6","HiraMinProN-W6","HG明朝E","ＭＳ Ｐ明朝","MS PMincho","MS 明朝",serif;
+}
+.font0 {
+	font-family: "ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","游明朝",YuMincho,"MS P明朝","MS PMincho",serif;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.font26 {
+	font-size:26px;
+	line-height:normal;
+}
+.font24 {
+	font-size:24px;
+	line-height:normal;
+}
+.font22 {
+	font-size:22px;
+	line-height:normal;
+}
+.font20 {
+	font-size:20px;
+	line-height:normal;
+}
+.font18 {
+	font-size:18px;
+	line-height:normal;
+}
+.font16 {
+	font-size:16px;
+	line-height:normal;
+}
+
+.posi {
+	position:relative;
+}
+
+#sprogo {
+	display:none;
+}
+
+#cy_h1 {
+	position:absolute;
+	top:0;
+	left:0;
+	padding:0 5px;
+	z-index:800;
+	font-size:10px;
+	text-shadow: #fff 1px 1px 0px, #fff -1px 1px 0px, #fff 1px -1px 0px, #fff -1px -1px 0px;
+}
+
+#sp_text {
+	display:none;
+}
+
+.tel-link2 a {
+	text-decoration:none;
+	color:inherit;
+}
+
+.tel-link2{
+	text-decoration:none;
+	color:inherit;
+}
+
+
+/* PC用
+------------------------------------------------------------*/
+
+@media only screen and (min-width: 1700px){
+.pc_none {
+	display:none;
+}
+.pctab_none {
+	display:none;
+}
+
+.pcblock {
+	display:block;
+}
+
+}
+
+@media only screen and (max-width: 1699px){
+
+
+}
+
+@media only screen and (max-width:1400px){
+
+
+
+}
+
+@media only screen and (max-width:1200px){
+
+
+
+}
+@media only screen and (max-width:1024px){
+.cy_container {
+	width:97%;
+}
+
+.font26 {
+	font-size:18px;
+}
+
+.font24 {
+	font-size:18px;
+}
+
+.font22 {
+	font-size:18px;
+}
+.font20 {
+	font-size:16px;
+}
+.font18 {
+	font-size:14px;
+}
+.font16 {
+	font-size:14px;
+}
+
+
+
+}
+
+
+@media only screen and (max-width:640px){
+body {
+	font-size:12px;
+}
+
+.cy_container {
+	width:94%;
+}
+
+.pc_none {
+	display:block;
+}
+.pctab_none {
+	display:none;
+}
+
+
+}
+
+/* スマートフォン 縦(ポートレート) */
+@media only screen and (max-width:480px){
+
+}
+
+
+
