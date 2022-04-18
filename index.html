@@ -5,82 +5,125 @@
 <title></title>
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<!-- Fonts -->
-<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
 <link rel="stylesheet" type="text/css" href="css/reset.css" />
 <link rel="stylesheet" href="css/index.css" type="text/css" />
-<link rel="stylesheet" href="css/temple.css" type="text/css" />
-<link rel="stylesheet" href="css/sptemple.css" type="text/css" />
-<link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/side_menu.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/html5shiv.js"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
-<script type="text/javascript" src="js/onload_img.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script type="text/javascript" src="js/side_menu.js"></script>
-<script type="text/javascript" src="js/tel.js"></script>
-<script type="text/javascript" src="js/map_click.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs3TOP0Of5tlwv04xwAzRNFcKSQlYbB7Q"></script>
-<script type="text/javascript" src="js/map.js"></script>
-<script type="text/javascript" src="js/accordion2.js"></script>
-</head>
-<body>
+<link rel="stylesheet" href="scss/index.scss" type="text/css" />
+<link rel="stylesheet" href="css/cssmin.css" type="text/css" />
+<link href="css/spmenu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/imgchange.js"></script>
+<script src="js/spmenu.js"></script>
+<script type="text/javascript" src="js/jsmin.js"></script>
+<script>
+$(window).on('load',function(){
+    setTimeout(function(){
+        $(".load_box").fadeOut(1000);
+    }, 3000);
+});
 
-<!--
-		<div id="spbox">
-			<nav id="spnav">
-				<div id="spmenu"><i class="fa fa-bars" aria-hidden="true"></i><span>MENU</span></div>
-				<div class="accordion_right">
-					<div id="menu3">Close</div>
-					<ul>
-						<li id="sptel"><a href="tel:0115957295"><i class="fa fa-mobile" aria-hidden="true"></i> <span>電話をかける</span></a></li>
-						<li class="sp_ac"><a href="index.html">トップページ<span>Top Page</span></a></li>
-						<li>
-							<a class="cy clearfix">乗馬案内<span>Horseback Riding</span><span class="mf-right">＋</span></a>
-							<ul class="contentWrap">
-								<li><a href="riding.html">乗馬案内</a></li>
-								<li><a href="r_first.html">はじめての方へ</a></li>
-								<li><a href="r_owner.html">オーナー募集</a></li>
-								<li><a href="r_introduction.html">施設紹介</a></li>
-								<li><a href="r_ripe.html">完熟推肥</a></li>
-								<li><a href="r_price.html">料金内容</a></li>
-								<li><a href="r_faq.html">よくある質問</a></li>
-							</ul>
-						</li>
-						<li>
-							<a class="cy clearfix">チキンのBBQ<span>Chicken BBQ</span><span class="mf-right">＋</span></a>
-							<ul class="contentWrap">
-								<li><a href="bbq.html">チキンのBBQ</a></li>
-								<li><a href="c_first.html">はじめての方へ</a></li>
-								<li><a href="c_menu.html">メニュー</a></li>
-								<li><a href="c_introduction.html">施設紹介</a></li>
-								<li><a href="c_faq.html">よくある質問</a></li>
-							</ul>
-						</li>
-						<li><a href="news.html">お知らせ<span>NEWS</span></a></li>
-						<li><a href="gallery.html">モモセの様子<span>GALLERY</span></a></li>
-						<li><a href="contact.html">お問合せ<span>CONTACT</span></a></li>
-						<li><a href="access.html">アクセス<span>ACCESS</span></a></li>
+</script>
+<script>
+	function start() {
+		var v = document.getElementById("video");
+		v.play();
+	}
+</script>
+</head>
+<body onload="start()">
+
+    <div class="load_box">
+        <div class="load_width">
+            <video id="video" playsinline muted>
+                <source src="images/SynCube_logo2.mp4" class="pcmovie" type="video/mp4" />
+            </video>
+        </div>
+    </div>
+    
+    <header class="cy_header container1760">
+        <h1 class="logo"><a href="index.html"><img src="images/top1.png" width="220" height="52" alt="SynCube"></a></h1>
+    </header>
+   	<div id="sp_box">
+		<div id="spicon" class="font2">
+			<img src="images/menu.png" width="56" height="56" alt="OPEN" class="menu_open">
+			<img src="images/close.png" width="56" height="56" alt="CLOSE" class="menu_close">
+            <p id="close" class="font1"></p>
+		</div>
+		<div id="open_menu">
+			<div id="center_box">
+				<div class="m_width z500">
+                    <div class="menu_logo"><a href="index.html"><img src="images/menu_logo.png" width="450" height="106" alt="SynCube"></a></div>
+					<ul class="page_link">
+                        <li>
+                            <div class="minimenu">
+                                <p><a href="about.html">SynCubeとは</a></p>
+                                <p><a href="mission.html">ミッション</a></p>
+                                <p><a href="company.html">会社概要</a></p>
+                                <p><a href="privacypolicy.html">プライバシーポリシー</a></p>
+                            </div>
+                        </li>
 					</ul>
 				</div>
-			</nav>
+			</div>
 		</div>
-
-	<div class="flexslider">
-		<div id="toptitle"><img src="images/rogo.png" width="376" height="372" alt=""></div>
-		<ul class="slides img100">
-			<li id="fade1"></li>
-			<li id="fade2"></li>
-			<li id="fade3"></li>
-			<li id="fade4"></li>
-			<li id="fade5"></li>
-		</ul>
 	</div>
--->
+    
+    <section class="top_main">
+        <h2>医療・介護の<br>未来を<span class="color_b">創造</span>する</h2>
+        <div class="main_img"><img src="images/top2.jpg" width="1325" height="688" alt="メイン画像"></div>
+    </section>
+    
+    <section class="pt-200 pb-180 container1600">
+        <div class="flex_box item_center">
+            <div class="flex_50 order2">
+                <p class="eng_midsahi font2 color_b"><span class="color_p">A</span>BOUT US</p>
+                <h2 class="midashi40">SynCubeとは</h2>
+                <p class="text18 t-hi20 mt-50 spmt-30">医療・介護現場の悩みをICTやデジタル技術を活用して解決し、<br class="brnone1580">業界全体の発展に貢献します。<br>
+点在するサービスや事象を統合、同期、同調することで、<br class="brnone1580">現場のイノベーションを起こし、豊かで素敵な笑顔があふれる<br class="brnone1580">未来を創造します。</p>
+                <p class="more mt-50 spmt-40"><a href="about.html"><span class="font2">READ MORE</span><span class="shape"><img src="images/shape.png" width="10" height="8" alt="シェイプ"></span></a></p>
+            </div>
+            <div class="flex_45 img100 minimt-60"><img src="images/company1.jpg" width="746" height="369" alt="SynCubeとは"></div>
+        </div>
+    </section>
+    
+    <section class="bg_blue_e6fcf2 padding170">
+        <div class="container1280 top_flex">
+            <div class="top_left">
+                <p class="eng_midsahi font2 color_b"><span class="color_p">M</span>ISSION</p>
+                <h2 class="midashi40">ミッション</h2>
+            </div>
+            <div class="top_right">
+                <p class="text26 t-b">効率化と価値あるコミュニケーションの創造により<br class="brnone1580">医療・福祉・介護現場に素敵な笑顔と癒しの時間を</p>
+                <p class="more mt-50 spmt-40"><a href="mission.html"><span class="font2">READ MORE</span><span class="shape"><img src="images/shape.png" width="10" height="8" alt="シェイプ"></span></a></p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="padding180 container1320">
+        <div class="flex_box item_center">
+            <div class="flex_50 order2">
+                <p class="eng_midsahi font2 color_b"><span class="color_p">C</span>OMPANY</p>
+                <h2 class="midashi40">会社情報</h2>
+                <p class="text18 t-hi20 mt-50 spmt-30">私たちは、豊かで笑顔のあふれる明るい医療介護の現場を創造する<br class="brnone1580">会社です。</p>
+                <p class="more mt-50 spmt-30"><a href="company.html"><span class="font2">READ MORE</span><span class="shape"><img src="images/shape.png" width="10" height="8" alt="シェイプ"></span></a></p>
+            </div>
+            <div class="flex_46 minimt-60 max_img520"><img src="images/top4.jpg" width="520" height="302" alt="会社情報"></div>
+        </div>
+    </section>
+    
+    <footer class="cy_footer">
+        <div class="container1760 f_flex">
+            <div class="f_logo"><img src="images/top1.png" width="220" height="52" alt="Syc Cube"></div>
+            <div class="f_right">
+                <p class="f_privacy"><a href="privacypolicy.html">プライバシーポリシー</a></p>
+                <p class="copy font2">© SynCube co.,ltd</p>
+            </div>
+        </div>
+    </footer>
+    
+
+
 </body>
 </html>
 
