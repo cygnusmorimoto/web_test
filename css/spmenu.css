@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* PC時からハンバーガーメニューの場合は#sp_boxのみ削除  */
+#open_menu {
+	display:none;
+}
+
+/*****************************************************************
+
+	色の設定
+
+******************************************************************/
+/* ハンバーガーメニューの線 */
+/* 開閉後の背景の色 */
+#center_box {
+    background-color: #f6fefa;
+}
+/* テキストメニューの色 */
+.page_link > li > a {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+/** リンクをホバーした後の色 **/
+.page_link a:hover {
+    color: #4ba0aa;
+}
+
+/**************************************
+	ハンバーガーアイコン
+***************************************/
+
+#spicon {
+	position:fixed;
+	right:80px;
+	top:50px;
+	background-position:50% 0;
+	background-repeat:no-repeat;
+	background-size:cover;
+	z-index:9999;
+	cursor:pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#spicon img{
+    transition: 0.3s ease;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.menu_close {
+    opacity: 0;
+}
+
+#spicon.m_active .menu_open{
+    opacity: 0;
+}
+#spicon.m_active .menu_close{
+    opacity: 1;
+}
+
+
+/**************************************
+	メニューオープン
+***************************************/
+
+
+#open_menu {
+	background-position:50% 0;
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:fixed;
+	z-index:9990;
+	top:0;
+	left:0;
+	width:100%;
+}
+
+
+/***********/
+
+#center_box {
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	margin:0;
+	height:100vh;
+	display:flex;
+    align-items: center;
+    justify-content: center;
+	overflow-y:scroll;
+}
+/**************************************
+	MENUの中身
+***************************************/
+
+.m_width {
+	width:94%;
+	max-width:1440px;
+	margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page_link {
+    width: calc(100% - 480px);
+    max-width: 490px;
+}
+.page_link a{
+    color: inherit;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+.page_link li{
+    margin: 50px 0;
+}
+.page_link li > p{
+    font-size: 25px;
+}
+.page_link .sp_pri_p p{
+    font-size: 17px;
+}
+.page_link .minimenu p {
+    font-size: 17px;
+    margin: 15px 0;
+}
+.minimenu {
+    margin-top: 30px;
+}
+
+
+
+@media only screen and (max-width: 1024px){
+#spicon {
+	right:20px;
+	top:30px;
+}
+
+
+.m_width {
+    display: block;
+}
+
+.page_link {
+    width: 100%;
+    max-width: 490px;
+    margin: 0 auto;
+    text-align: center;
+}
+.menu_logo {
+    text-align: center;
+}
+.page_link {
+    margin-top: 30px;
+}
+
+    
+}
+
+@media only screen and (max-width: 740px){
+/**************************************
+	ハンバーガーアイコン
+***************************************/
+
+#spicon {
+	position:fixed;
+	right:10px;
+	top:15px;
+}
+
+.menu_logo img{
+    width: 240px;
+    height: auto;
+}
+.page_link {
+    margin-top: 20px;
+}
+.page_link li{
+    margin: 30px 0;
+}
+.page_link li > p{
+    font-size: 20px;
+}
+.page_link .minimenu p {
+    font-size: 16px;
+    margin: 15px 0;
+}
+.minimenu {
+    margin-top: 20px;
+}
+
+
+    
+    
+}
+
+

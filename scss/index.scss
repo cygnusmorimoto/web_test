@@ -1,0 +1,958 @@
+/* Scss Document */
+
+$blue:#4ba0aa; //サイトで良く使う色
+$text:#000; //基本的なテキストの色
+
+//hoverアニメーションを使いたい場合に使用
+//呼び出し方法(cssに指定)　→　@include ani;
+@mixin ani {
+	transition: 0.3s ease-in-out;
+}
+
+//display:flex;を使用した場合等に使用（widthが30%から70%まで）画面幅が740pxで100%に変わる
+//呼び出し方法(htmlに指定)　→　.flex_30　～　.flex_70
+@for $i from 30 through 70 {
+  .flex_#{$i} { width: 1% * $i; }
+}
+
+//padding-topとpadding-bottom（タブレットで全て80px、スマホで全て60px）←変更可能
+//呼び出し方法(htmlに指定)　→　.padding100　～　.padding300
+$p: 100;
+@while $p < 310{
+    .padding#{$p}{
+        padding-top: $p + px;
+        padding-bottom: $p + px;
+    }
+    $p: $p + 10;
+}
+
+//margin-topとmargin-bottom（タブレットで全て80px、スマホで全て60px）←変更可能
+//呼び出し方法(htmlに指定)　→　.margin100　～　.margin300
+$m: 100;
+@while $m < 310{
+    .margin#{$m}{
+        margin-top: $m + px;
+        margin-bottom: $m + px;
+    }
+    $m: $m + 10;
+}
+
+//padding-top（タブレットで全て80px、スマホで全て60px）←変更可能
+//呼び出し方法(htmlに指定)　→　.pt-120　～　.pt-300
+$pt: 110;
+@while $pt < 310{
+    .pt-#{$pt}{
+        padding-top: $pt + px;
+    }
+    $pt: $pt + 10;
+}
+
+//padding-bottom（タブレットで全て80px、スマホで全て60px）←変更可能
+//呼び出し方法(htmlに指定)　→　.pb-120　～　.pb-300
+$pb: 110;
+@while $pb < 310{
+    .pb-#{$pb}{
+        padding-bottom: $pb + px;
+    }
+    $pb: $pb + 10;
+}
+
+//margin-top（タブレットで全て80px、スマホで全て60px）←変更可能
+//呼び出し方法(htmlに指定)　→　.mt-120　～　.mt-300
+$mt: 110;
+@while $mt < 310{
+    .mt-#{$mt}{
+        margin-top: $mt + px;
+    }
+    $mt: $mt + 10;
+}
+
+//margin-bottom（タブレットで全て80px、スマホで全て60px）←変更可能
+//呼び出し方法(htmlに指定)　→　.mb-120　～　.mb-300
+$mb: 110;
+@while $mb < 310{
+    .mb-#{$mb}{
+        margin-bottom: $mb + px;
+    }
+    $mb: $mb + 10;
+}
+
+* {
+    text-decoration: none !important;
+}
+
+.load_box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    background-color: #FFF;
+    img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+}
+
+/************************/
+
+.cy_header {
+    padding-top: 45px;
+}
+
+.top_main {
+    margin-top: 140px;
+    overflow: hidden;
+    position: relative;
+    h2 {
+        font-size: 72px;
+        font-weight: bold;
+        max-width: 1600px;
+        width: 94%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 1.3em;
+    }
+}
+
+.main_img {
+    padding-top: 50px;
+    text-align: right;
+    img {
+        max-width: 1325px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.color_b {
+    color: $blue;
+}
+/***************/
+.eng_midsahi {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+.color_p {
+    color: #ff82b4;
+}
+
+.midashi40 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.text18 {
+    font-size: 18px;
+}
+.more {
+    a {
+        color: inherit;
+        font-size: 15px;
+        position: relative;
+        letter-spacing:0;
+    }
+    .font2 {
+        border-bottom: 1px solid #a9a7a6;
+    }
+    .shape {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: -50px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include ani;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $blue;
+    }
+    a:hover {
+        .shape {
+            background-color: #ff82b4;
+            width: 36px;
+            height: 36px;
+            right: -53px;
+        }
+    }
+}
+/*****************/
+.bg_blue_e6fcf2 {
+    background-color: #e6fcf2;
+}
+.top_flex {
+    display: flex;
+    justify-content: space-between;
+}
+.top_right {
+    width: calc(100% - 260px);
+    max-width: 660px;
+}
+.text26 {
+    font-size: 26px;
+}
+/**********/
+.max_img520 {
+    img {
+        max-width: 520px;
+        width: 100%;
+        height: auto;
+    }
+}
+/**********/
+.cy_footer {
+    background-color: #fafafa;
+    padding: 80px 0;
+}
+.f_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.f_right {
+    display: flex;
+}
+.f_privacy {
+    padding-right: 40px;
+    a {
+        color: inherit;
+    }
+}
+.copy {
+    letter-spacing: 0;
+}
+/*********************************************************
+
+    SynCubeとは
+
+**********************************************************/
+.main_in {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    h2 {
+        font-size: 50px;
+        line-height: 1.3em;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 0 14px;
+        z-index: 100;
+        letter-spacing: 0.05em;
+        .eng {
+            margin-left: 20px;
+            font-size: 20px;
+        }
+    }
+}
+.main_in_img {
+    text-align: right;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.about_main {
+    img {
+        max-width: 957px;
+        height: auto;
+        width: 100%;
+    }
+}
+/*******************/
+.ab_flex {
+    display: flex;
+    justify-content: space-between;
+}
+.ab_left {
+    width: 31%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        width: 65%;
+        height: auto;
+    }
+    &:after {
+        content: "";
+        background: url("../images/about3.jpg") right 0/74px 45px no-repeat;
+        width: 35%;
+        height: 45px;
+    }
+}
+.ab_right {
+    width: 69%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 170px;
+    li {
+        margin: 0 40px;
+        width: 33.33%;
+        &:last-child .ab_img:after {
+            display: none;
+        }
+    }
+}
+.ab_img {
+    text-align: center;
+    min-height: 195px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &:after {
+        content: "";
+        background: url("../images/about5.jpg") 50% 50%/74px 75px no-repeat;
+        width: 74px;
+        height: 75px;
+        position: absolute;
+        right: -78px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+.ab_text {
+    margin-top: 20px;
+    width: calc(100% + 50px);
+    margin-left: -25px;
+    display: flex;
+    justify-content: center;
+    min-height: 160px;
+    p {
+        font-size: 17px;
+        letter-spacing: 0.03em;
+        line-height: 1.5em;
+    }
+}
+.indent_p {
+    text-indent: -1.1em;
+    padding-left: 1.1em;
+}
+/*****************/
+.ab_border {
+    margin-top: 100px;
+    border: 1px solid $blue;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    p {
+        font-size: 20px;
+    }
+}
+.span_25 {
+    font-size: 25px;
+    font-weight: bold;
+}
+/*********************************************************
+
+    ミッション
+
+**********************************************************/
+.mission_main {
+    img {
+        max-width: 870px;
+        height: auto;
+        width: 100%;
+    }
+}
+/****************/
+.missin_img {
+    text-align: center;
+    img {
+        max-width: 915px;
+        height: auto;
+        width: 100%;
+    }
+
+}
+.mission_border {
+    border: 5px solid #4ba0aa;
+    padding: 65px 20px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    p {
+        line-height: 1.7em;
+    }
+    img {
+        margin: 40px auto;
+        display: block;
+        max-width: 744px;
+        width: 100%;
+        height: auto;
+    }
+}
+.eng_midsahi.m_eng_size {
+    font-size: 28px;
+}
+.text22 {
+    font-size: 22px;
+}
+/*********************************************************
+
+    会社概要
+
+**********************************************************/
+.company_main {
+    img {
+        max-width: 660px;
+        height: auto;
+        width: 100%;
+    }
+}
+/****************/
+.com_list {
+    border-top: 1px solid $blue;
+    li {
+        padding: 40px 0;
+        border-bottom: 1px solid $blue;
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+    }
+}
+.com_cell1 {
+    width: 30%;
+    font-weight: bold;
+}
+.com_cell2 {
+    width: 70%;
+}
+/*********************************************************
+
+    プライバシーポリシー
+
+**********************************************************/
+.privacy_main {
+    img {
+        max-width: 534px;
+        height: auto;
+        width: 100%;
+    }
+}
+/****************/
+.p_line_hight2 {
+    .midashi35 {
+        text-indent: -1.4em;
+        padding-left: 1.4em;
+    }
+    .midashi25 {
+        text-indent: -2.7em;
+        padding-left: 2.7em;
+    }
+}
+.midashi35 {
+    font-size: 35px;
+    font-weight: bold;
+}
+.p_line_hight2 {
+    p,li {
+        line-height: 2.2em;
+    }
+}
+.indent_list {
+    li {
+        text-indent: -2.7em;
+        padding-left: 2.7em;
+    }
+}
+.indent_p2 {
+    text-indent: -2.7em;
+    padding-left: 2.7em;
+}
+.pl_box {
+    padding-left: 46px;
+}
+.indent_list2 {
+    li {
+        display: flex;
+        justify-content: space-between;
+        span:nth-child(1) {
+            width: 30px;
+        }
+        span:nth-child(2) {
+            width: calc(100% - 30px);
+        }
+    }
+}
+.midashi25 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* PC用
+------------------------------------------------------------*/
+@media only screen and (max-width: 1699px) {
+
+}
+
+@media only screen and (max-width: 1400px) {
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .brnone1200 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+$p: 100;
+$pixel:120px;
+@while $p < 310{
+    .padding#{$p}{
+        padding-top: $pixel;
+        padding-bottom: $pixel;
+    }
+    $p: $p + 10;
+}
+$m: 100;
+@while $m < 310{
+    .margin#{$m}{
+        margin-top: $pixel;
+        margin-bottom: $pixel;
+    }
+    $m: $m + 10;
+}
+$pt: 120;
+@while $pt < 310{
+    .pt-#{$pt}{
+        padding-top: $pixel;
+    }
+    $pt: $pt + 10;
+}
+$pb: 120;
+@while $pb < 310{
+    .pb-#{$pb}{
+        padding-bottom: $pixel;
+    }
+    $pb: $pb + 10;
+}
+$mt: 120;
+@while $mt < 310{
+    .mt-#{$mt}{
+        margin-top: $pixel;
+    }
+    $mt: $mt + 10;
+}
+$mb: 120;
+@while $mb < 310{
+    .mb-#{$mb}{
+        margin-bottom: $pixel;
+    }
+    $mb: $mb + 10;
+}
+
+
+/************************/
+
+.cy_header {
+    padding-top: 30px;
+}
+
+.top_main {
+    margin-top: 60px;
+    h2 {
+        font-size: 52px;
+        line-height: 1.3em;
+    }
+}
+
+.main_img {
+    padding-top: 100px;
+    text-align: right;
+}
+
+/*****************/
+.top_flex {
+    display: block;
+}
+.top_right {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 40px;
+}
+/*********************************************************
+
+    SynCubeとは
+
+**********************************************************/
+.main_in {
+    width: 94%;
+    margin: 50px auto 0;
+    h2 {
+        font-size: 42px;
+        position: static;
+        top: 0;
+        padding: 0;
+        .eng {
+            margin-left: 20px;
+            font-size: 20px;
+        }
+    }
+}
+.main_in_img {
+    text-align: center;
+    margin-top: 60px;
+}
+/*******************/
+.ab_flex {
+    display: block;
+}
+.ab_left {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 80px;
+    padding-bottom: 100px;
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+    }
+    &:after {
+        background: url("../images/about3.jpg") center 0/74px 45px no-repeat;
+        width: 100%;
+        height: 45px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: rotate(90deg);
+    }
+}
+.ab_right {
+    width: 100%;
+    padding-top: 60px;
+}
+/*********************************************************
+
+    ミッション
+
+**********************************************************/
+.mission_border {
+    font-size: 30px;
+}
+
+.text22 {
+    font-size: 18px;
+}
+
+
+}
+
+@media only screen and (max-width: 740px) {
+@for $i from 30 through 70 {
+  .flex_#{$i} { width: 100%; }
+}
+
+$p: 100;
+$pixel:80px;
+@while $p < 310{
+    .padding#{$p}{
+        padding-top: $pixel;
+        padding-bottom: $pixel;
+    }
+    $p: $p + 10;
+}
+$m: 100;
+@while $m < 310{
+    .margin#{$m}{
+        margin-top: $pixel;
+        margin-bottom: $pixel;
+    }
+    $m: $m + 10;
+}
+$pt: 110;
+@while $pt < 310{
+    .pt-#{$pt}{
+        padding-top: $pixel;
+    }
+    $pt: $pt + 10;
+}
+$pb: 110;
+@while $pb < 300{
+    .pb-#{$pb}{
+        padding-bottom: $pixel;
+    }
+    $pb: $pb + 10;
+}
+$mt: 110;
+@while $mt < 310{
+    .mt-#{$mt}{
+        margin-top: $pixel;
+    }
+    $mt: $mt + 10;
+}
+$mb: 110;
+@while $mb < 310{
+    .mb-#{$mb}{
+        margin-bottom: $pixel;
+    }
+    $mb: $mb + 10;
+}
+
+.load_box {
+    img {
+        max-width: 300px;
+    }
+}
+
+/************************/
+
+.cy_header {
+    padding-top: 20px;
+}
+    .logo img {
+        width: 200px;
+        height: auto;
+    }
+
+.top_main {
+    margin-top: 50px;
+    h2 {
+        position: static;
+        transform: translateX(0);
+        margin: 0 auto;
+        font-size: 32px;
+        line-height: 1.5em;
+    }
+}
+
+.main_img {
+    padding-top: 40px;
+}
+/***************/
+.eng_midsahi {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.color_p {
+    color: #ff82b4;
+}
+
+.midashi40 {
+    font-size: 26px;
+}
+
+.text18 {
+    font-size: 15px;
+}
+    
+/*****************/
+.text26 {
+    font-size: 17px;
+}
+/**********/
+.max_img520 {
+    img {
+        max-width: 100%;
+    }
+}
+/**********/
+.cy_footer {
+    padding: 80px 0;
+}
+.f_flex {
+    display: block;
+}
+    .f_logo {
+        text-align: center;
+        img {
+            width: 200px;
+            height: auto;
+        }
+    }
+.f_right {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+}
+.f_privacy {
+    padding-right: 0;
+}
+.copy {
+    margin-top: 30px;
+}
+/*********************************************************
+
+    SynCubeとは
+
+**********************************************************/
+.main_in {
+    margin: 60px auto 0;
+    h2 {
+        display: block;
+        font-size: 32px;
+        .eng {
+            margin: 0;
+            font-size: 16px;
+            display: block;
+        }
+    }
+}
+.main_in_img {
+    margin-top: 40px;
+}
+/*******************/
+.ab_left {
+    margin-top: 60px;
+    padding-bottom: 70px;
+    img {
+        width: 60%;
+        height: auto;
+        max-width: 60%;
+    }
+    &:after {
+        background: url("../images/about3.jpg") center 0/45px 30px no-repeat;
+        height: 30px;
+    }
+}
+.ab_right {
+    width: 100%;
+    display: block;
+    padding-top: 40px;
+    li {
+        margin: 0;
+        width: 100%;
+        position: relative;
+        padding: 0 0 100px;
+        &:after {
+            content: "";
+            background: url("../images/about5.jpg") 50% 50%/50px 50px no-repeat;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: auto;
+            left: 50%;
+            top: auto;
+            bottom: 0;
+            transform: translate(-50%,-50%);
+        }
+        &:last-child:after {
+            display: none;
+        }
+        &:last-child {
+            padding-bottom: 0;
+            margin: 0;
+        }
+    }
+}
+.ab_img {
+    min-height: 0;
+    &:after {
+        display: none;
+    }
+    img {
+        width: 38%;
+        height: auto;
+        
+    }
+}
+.ab_text {
+    width: 100%;
+    max-width: 280px;
+    margin: 20px auto 0;
+    min-height: 0;
+    p {
+        font-size: 15px;
+    }
+}
+/*****************/
+.ab_border {
+    margin-top: 80px;
+    padding: 20px 20px;
+    p {
+        font-size: 16px;
+    }
+}
+.span_25 {
+    font-size: 20px;
+}
+
+/*********************************************************
+
+    ミッション
+
+**********************************************************/
+.mission_border {
+    border: 3px solid #4ba0aa;
+    padding: 25px 20px;
+    font-size: 18px;
+    img {
+        margin: 20px auto;
+    }
+}
+
+.text22 {
+    font-size: 15px;
+}
+.eng_midsahi.m_eng_size {
+    font-size: 22px;
+}
+
+/*********************************************************
+
+    会社概要
+
+**********************************************************/
+.com_list {
+    li {
+        padding: 20px 0;
+        border-bottom: 1px solid $blue;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+}
+.com_cell1 {
+    width: 100px;
+}
+.com_cell2 {
+    width: calc(100% - 100px);
+}
+/*********************************************************
+
+    プライバシーポリシー
+
+**********************************************************/
+.privacy_main {
+    img {
+        max-width: 100%;
+    }
+}
+/****************/
+.midashi35 {
+    font-size: 22px;
+}
+.pl_box {
+    padding-left: 38px;
+}
+.midashi25 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+}
+
+/* スマートフォン 縦(ポートレート) */
+@media only screen and (max-width: 480px) {
+
+}

@@ -1,0 +1,19 @@
+*{
+margin: 0;
+padding: 0;	
+	}
+	
+img{
+width: 100%;	
+	}
+iframe{
+	z-index:-100;
+position:relative;
+height:600px;
+top:-50px;
+width: 100%;	
+	}
+.bottom{
+	position:relative;
+	top:-100px;
+	}
